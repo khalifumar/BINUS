@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	FILE *fp;
+	fp = fopen("data.text","r");
+    
+    char buffer[1000];
+    while (fgets(buffer, 1000, fp)) {
+        printf("%s", buffer);
+    }
+	fclose(fp);
+    
+	return 0;
+}
